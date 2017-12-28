@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="angular.min.js"></script>
+<script>
+
+var m1 = angular.module('myHello',[]);
+m1.factory('hello',function(){
+	return {
+		name : '123',
+		show : function(){
+			console.log(this.name);
+		}
+	};
+});
+var m2 = angular.module('myApp',['myHello']);
+m2.controller('Aaa',['$scope','hello',function($scope,hello){
+	
+	$scope.name = hello.name;
+	
+	hello.show();
+	
+}]);
+
+</script>
+</head>
+
+<body ng-controller="Aaa">
+	<div>{{name}}</div>
+</body>
+</html>

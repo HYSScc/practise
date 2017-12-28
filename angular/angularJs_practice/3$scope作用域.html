@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="angular.min.js"></script>
+<script>
+
+function Aaa($scope,$rootScope){
+	$scope.name = 'hello angular';
+	$scope.age = '20';
+	$rootScope.age = '40';
+}
+function Bbb($scope){
+	//$scope.name = 'hello miaov';
+	//$scope.age = '30';
+}
+
+</script>
+</head>
+
+<body>
+    <div ng-controller="Aaa">{{name}}<div ng-controller="Bbb">{{name}}<div>{{age}}</div></div></div>
+    
+    
+</body>
+</html>

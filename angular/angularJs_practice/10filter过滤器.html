@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="angular.min.js"></script>
+<script>
+
+var m1 = angular.module('myApp',[]);
+
+m1.controller('Aaa',['$scope',function($scope){
+	
+	$scope.num = '723894734.7489545';
+	
+	$scope.list = [
+		{color:"red",age:"20"},
+		{color:"yellow",age:"30"},
+		{color:"blue",age:"40"},
+		{color:"green",age:"10"}
+	];
+
+}]);
+
+
+
+</script>
+</head>
+
+<body>
+<div ng-controller="Aaa">
+	<p>{{num}}</p>
+	<p>{{num | currency:"￥"}}</p>
+    <p>{{ list }}</p>
+    <p>{{ list | filter : 'r' }}</p>
+</div>
+</body>
+</html>
