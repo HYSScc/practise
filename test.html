@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第一次提交</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+</head>
+<body>
+   <!--  <form>
+		<input type="url" name="url" value="http://www.baidu.com" >
+        <input type="submit"value="提交">
+	</form> -->
+    <!--email类型-->
+    <br>
+    <form>
+		<input name="email" type="email" value="www.baidu@aa.com">
+		<input id="test" type="submit"value="提交">
+	</form>
+    <!--date类型-->
+	<br>
+   <!--  <form>
+		 <input name="date" type="date" value="日期">
+	</form> -->
+    <!--time类型-->
+	<br>
+	<form>
+    <input name="time" type="time"  value="00:00">
+    </form>
+	<br>
+	<form>
+    <input name="datetime" type="datetime"  value="">
+	</form>
+	<br>
+    <form>
+    <input name="datetimelocal" type="datetime-local" value="">
+	</form>
+	<br>
+	<form>
+    <input name="search" type="search" value="请输入：">
+	</form>
+</body>
+<script type="text/javascript" src="./jquery-1.12.0.js"></script>
+<script type="text/javascript">
+	$(function  ( ) {
+       $('#test').click(function(){
+       	alert("#test__click")
+       });
+      var friends = ["jim","make","yellow","anday"];
+         friends.forEach(function(eachName,index){
+         	console.log(index + 1 +"." +eachName)
+         });
+
+       var  allUserData = [];
+       function logStaff (UserData ){
+         if (typeof UserData === "string" ) {
+         	conslor.log(UserData)
+         }
+         else if (typeof UserData === "object") {
+         	for(var item in UserData ){
+         		console.log(item +":"+UserData[item])
+            	 console.log(allUserData)
+         	}
+ 
+         }
+       }
+
+//A function that takes two parameters,the last one that callback function
+
+      function getInput (options,callback){
+      	 allUserData.push (options);
+      	 callback (options);
+      }
+
+
+      getInput ({name:"rich",speciality:"javascript"},logStaff);
+
+// 给回调函数传递参数（全局变量或者本地变量）
+    var generalLastName = "clinton";
+    function getInput(options,callback){
+      allUserData.push(options);
+      callback(generalLastName,options)
+    }
+    function getInput(options,callback){
+    	allUserData.push(options);
+    	if (typeof callback === "function") {
+    		callback(options)
+    	};
+    }
+
+//含有this对象的回调函数的调用处理
+    var  clientData = {
+    	id: 094545,
+    	fullName:"not set",
+    	  // setUserName is a method on the clientData object
+    	setUserName:function (firstName,lastName){
+    		// this refers to the fullName property in this object`
+    		this.fullName = firstName+"和"+lastName;
+    	}
+
+    };
+
+
+    function getUserInput (firstName,lastName,callback){
+        //在这里要验证firstName / lastName吗
+        //now save the names
+        callback(firstName,lastName);
+    }
+    
+    getUserInput ("brake","obama",clientData.setUserName)
+    console.log(clientData.fullName)
+    console.log(window.fullName)
+
+    function getUserInput (firstName,lastName,callback,callbackObj){
+
+        //在这里要验证firstName / lastName吗
+        //now save the names
+        // callback.apply(callbackObj,[firstName,lastName]);
+        callback.call(callbackObj,firstName,lastName);
+
+    }
+    getUserInput ("brake","obama",clientData.setUserName,clientData)
+
+     console.log(clientData.fullName)
+
+
+
+    function fn(arg) {
+      console.log(this.arg);
+      console.log(this);
+    }
+    fn(123);
+    var o = { fn: fn };
+    o.fn(123);
+
+
+
+        function changeAgeAndReference(person) {
+            person.age = 25;
+            person = {
+                name: 'John',
+                age: 50
+            };
+
+            return person;
+        }
+
+        var personObj1 = {
+            name: 'Alex',
+            age: 30
+        };
+
+        var personObj2 = changeAgeAndReference(personObj1);
+        console.log(personObj2)
+
+
+
+        //变量查找
+
+        var a = "abc";
+
+        var obj = {
+            a: "def",
+            display3: function () {
+                var a = "sssss";
+                console.log(a);
+            },
+            display4: function() {
+                console.log(this.a);
+            }
+        };
+
+        Object.prototype.a = "ghi";
+
+        function display1() {
+            // var = "hahaha";
+            console.log(a)
+        }
+
+        function display2() {
+            console.log(this.a);
+        }
+
+        display1();  //  'abc' 
+        display2();  //  'abc'
+
+        obj.display3(); //'ssss'
+        obj.display4();  //'def'
+
+// display2.call(obj);  //  'def'
+// display1.call(obj);  //  'abc'
+
+// 首先：
+//
+// 第一个：
+// 调用display1函数，通过作用域链来查找a。此时display1的作用域链为：display1的活动对象→全局活动对象,
+// 所以找到了全局活动对象中的"abc"，如果在display1中有变量a，那么输出的则是这个变量的值。
+//
+// 第二个
+// 调用diplay2函数，通过原型链来查找a。因为this是基于当前的执行环境绑定的，所以this指向全局变量对象(也就是window)，所以找到了"abc"并输出。
+// 有意思的是，此时如果我删除window中定义的a="abc", 那么输出结果则是"ghi". 于是回忆了一下自己所学的知识，发现因为window对象是Global对象在浏览器中的表现，然后Global是js中的单体内置对象，那么似乎它也应该继承自Object.prototype, 恩..按照我的猜想，输出结果为"ghi"是情理之中的。
+//
+// 第三个：
+// 通过obj调用display3函数，因为前面没有this，所以是通过作用域链进行查找的，此时display3的作用域链为display1的活动对象→全局活动对象，所以输出结果是"abc", 同样，如果我再display3中定义了a，那么输出的则是这个a的值
+//
+// 第四个
+// 通过obj调用display4函数，因为前面有this，所以是通过原型链进行查找的，此时this指向的是obj，所以输出的结果是obj对象中"def"，如果我们删除obj中的a属性，那么输出结果则是Object.prototype中的"ghi"，如果再删除这个ghi，那么输出结果就是undefined了。
+// 上面这些好像都符合逻辑，可是我又突然发现，当调用display1时，如果删除了作用域链中每个变量对象的a属性，那么输出结果则是"ghi"， 这个"ghi"是在Object.prototype中定义的，所以
+// 综合了一下
+// 直接访问标识符的顺序是按顺序查找作用域链中的每一个变量对象直至全局变量对象，如果全局变量对象中没
+//
+// 有该变量，则沿着window对象的原型链进行查找。(全局对象在所有变量的最后端，即存在于运行期上下文作用域链的最末端，因此在标识符解析的时候，全局变量的查找是最慢的，)
+//
+// 通过this访问标识符是通过原型链来查找的。
+
+var obj = {};
+var arr = [];
+obj.arr = arr;
+arr.push(9);
+obj.arr[0] = 17;
+
+console.log(obj.arr === [17])
+console.log(typeof  obj.arr )
+console.log(obj.arr)
+
+
+function fn(item1, item2) {
+    if (item2 === undefined) {
+        item2 = [];
+    }
+    
+    item2[0] = item1;
+  
+    return item2;
+}
+
+var w = {};
+var x = [w];
+var y = fn(w);
+var z = fn(w, x);
+
+
+console.log(y);
+
+var  hhg = $('<div class = "test">');
+console.log(hhg)
+
+
+
+
+
+// 阶乘函数
+
+let jcf = function (num){
+      return num>1 ? num * jcf(num-1) : 1;
+}
+
+
+})
+</script>
+</html>
+
