@@ -53,16 +53,9 @@
 * git branch -m branch_0.1 branch_1.0 将branch_0.1重命名为branch_1.0
 * git checkout branch_1.0/master 切换到branch_1.0/master分支
 * du -hs
-* 
 * git branch 删除远程branch
-* 
-*  
-* 
 * git pushorigin :branch_remote_name
-* 
-*  
 * gitbranch -r -d branch_remote_name
-* 
 * 初始化版本库，并提交到远程服务器端
 * mkdir WebApp
 * cd WebApp
@@ -71,60 +64,28 @@
 * git add README添加文件
 * git commit -m 'first commit'
 * git remote add origin git@github.com:daixu/WebApp.git增加一个远程服务器端
+* 上面的命令会增加URL地址为'git@github.com:daixu/WebApp.
+* git'，名称为origin的远程服务器库，以后提交代码的时候只需要使用origin别名即可
 * 
-*  
-* 
-* 上面的命令会增加URL地址为'git@github.com:daixu/WebApp.git'，名称为origin的远程服务器库，以后提交代码的时候只需要使用origin别名即可
-* 
-* 
-* 二、 Git命令速查表
-* 
-*  
-* 
-*  
+###   二、 Git命令速查表
 * 
 * 1、常用的Git命令
 * 
 * 命令
 * 	
-* 
 * 简要说明
-* 
-* git add
-* 	
-* 
 * 添加至暂存区
-* 
 * gitadd–interactive
-* 	
-* 
-* 交互式添加
-* 
 * git apply
-* 	
-* 
 * 应用补丁
-* 
 * git am
-* 	
-* 
 * 应用邮件格式补丁
-* 
 * gitannotate
-* 	
-* 
 * 同义词，等同于 gitblame
-* 
 * gitarchive
-* 	
-* 
 * 文件归档打包
-* 
 * gitbisect
-* 	
-* 
 * 二分查找
-* 
 * git blame
 * 	
 * 
@@ -992,135 +953,56 @@
 *  
 * 
 * $git commit            //提交到本地仓库，然后会填写更新日志( -m “更新日志”也可)
-* 
-*  
-* 
+ 
 * $git remote add origingit@github.com:WadeLeng/hello-world.git      //增加到remote
-* 
-*  
-* 
+ 
 * $git push origin master   //push到github上
-* 
-*  
-* 
+ 
 * 2.更新项目（新加了文件）：
-* 
-*  
-* 
+ 
 * $cd ~/hello-world
-* 
-*  
-* 
+ 
 * $git add .              //这样可以自动判断新加了哪些文件，或者手动加入文件名字
-* 
-*  
-* 
+ 
 * $git commit           //提交到本地仓库
-* 
-*  
-* 
+ 
 * $git push origin master   //不是新创建的，不用再add到remote上了
-* 
-*  
-* 
+ 
 * 3.更新项目（没新加文件，只有删除或者修改文件）：
-* 
-*  
-* 
+ 
 * $cd ~/hello-world
-* 
-*  
-* 
+ 
 * $git commit -a        //记录删除或修改了哪些文件
-* 
-*  
-* 
+ 
 * $git push origin master //提交到github
-* 
-*  
-* 
+ 
 * 4.忽略一些文件，比如*.o等:
-* 
-*  
-* 
+ 
 * $cd ~/hello-world
-* 
-*  
-* 
 * $vim .gitignore   //把文件类型加入到.gitignore中，保存
-* 
-*  
-* 
+ 
 * 然后就可以git add .能自动过滤这种文件
-* 
-*  
-* 
+ 
 * 5.clone代码到本地：
-* 
-*  
-* 
+ 
 * $gitclone git@github.com:WadeLeng/hello-world.git
-* 
-*  
-* 
+ 
 * 假如本地已经存在了代码，而仓库里有更新，把更改的合并到本地的项目：
-* 
-*  
-* 
+ 
 * $git fetch origin   //获取远程更新
-* 
-*  
-* 
+ 
 * $git merge origin/master//把更新的内容合并到本地分支
-* 
-*  
-* 
+
 * 6.撤销
-* 
-*  
-* 
+ 
 * $git reset
-* 
-*  
-* 
 * 7.删除
-* 
-*  
-* 
-* $git rm * // 不是用rm
-* 
-*  
-* 
-* //------------------------------常见错误-----------------------------------
-* 
-*  
-* 
 * 1.$ git remoteadd origingit@github.com:WadeLeng/hello-world.git
-* 
-*  
-* 
-*  
-* 
-*  
-* 
-*  错误提示：fatal: remoteorigin already exists.
-* 
-*  
-* 
 *  解决办法：$ gitremote rm origin
-* 
-*  
-* 
 *  然后在执行：$ gitremote add origingit@github.com:WadeLeng/hello-world.git 就不会报错误了
-* 
-*  
-* 
+
 *  2. $ git pushorigin master
-* 
-*  
-* 
+
 *  错误提示：error:failed topush som refs to
-* 
-*  
-* 
+ 
 *  解决办法：$ git pullorigin master //先把远程服务器github上面的文件拉先来，再push 上去。
