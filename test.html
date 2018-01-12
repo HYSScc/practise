@@ -43,7 +43,7 @@
 <script type="text/javascript">
 	$(function  ( ) {
        $('#test').click(function(){
-       	alert("#test__click")
+       	// alert("#test__click")
        });
       var friends = ["jim","make","yellow","anday"];
          friends.forEach(function(eachName,index){
@@ -257,10 +257,12 @@ let jcf = function (num){
  //对象声明
 var reg = new RegExp('sx');
 var stat = reg.test("sxuek");
-alert(stat)
+// alert(stat)
 
 
-
+(function (){
+  return  typeof arguments
+})()
 
 
 
