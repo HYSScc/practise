@@ -1,65 +1,66 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>第一次提交</title>
-	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
-</head>
-<body>
-   <!--  <form>
-		<input type="url" name="url" value="http://www.baidu.com" >
+    <head>
+        <meta charset="UTF-8">
+        <title>第一次提交</title>
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+    </head>
+    <body>
+        <!--  <form>
+    <input type="url" name="url" value="http://www.baidu.com" >
         <input type="submit"value="提交">
-	</form> -->
-    <!--email类型-->
-    <br>
-    <form>
-		<input name="email" type="email" value="www.baidu@aa.com">
-		<input id="test" type="submit"value="提交">
-	</form>
-    <!--date类型-->
-	<br>
-   <!--  <form>
-		 <input name="date" type="date" value="日期">
-	</form> -->
-    <!--time类型-->
-	<br>
-	<form>
-    <input name="time" type="time"  value="00:00">
-    </form>
-	<br>
-	<form>
-    <input name="datetime" type="datetime"  value="">
-	</form>
-	<br>
-    <form>
-    <input name="datetimelocal" type="datetime-local" value="">
-	</form>
-	<br>
-	<form>
-    <input name="search" type="search" value="请输入：">
-	</form>
-</body>
-<script type="text/javascript" src="./jquery-1.12.0.js"></script>
-<script type="text/javascript">
-	$(function  ( ) {
+  </form> -->
+        <!--email类型-->
+        <br>
+        <form>
+            <input name="email" type="email" value="www.baidu@aa.com">
+            <input id="test" type="submit" value="提交">
+        </form>
+        <!--date类型-->
+        <br>
+        <!--  <form>
+     <input name="date" type="date" value="日期">
+  </form> -->
+        <!--time类型-->
+        <br>
+        <form>
+            <input name="time" type="time" value="00:00">
+        </form>
+        <br>
+        <form>
+            <input name="datetime" type="datetime" value="">
+        </form>
+        <br>
+        <form>
+            <input name="datetimelocal" type="datetime-local" value="">
+        </form>
+        <br>
+        <form>
+            <input name="search" type="search" value="请输入：">
+        </form>
+    </body>
+    <script type="text/javascript" src="./jquery-1.12.0.js"></script>
+    <script type="text/javascript">
+        
+  $(function  ( ) {
        $('#test').click(function(){
-       	// alert("#test__click")
+        // alert("#test__click")
        });
       var friends = ["jim","make","yellow","anday"];
          friends.forEach(function(eachName,index){
-         	console.log(index + 1 +"." +eachName)
+          // console.log(index + 1 +"." +eachName)
          });
 
        var  allUserData = [];
        function logStaff (UserData ){
          if (typeof UserData === "string" ) {
-         	conslor.log(UserData)
+          conslor.log(UserData)
          }
          else if (typeof UserData === "object") {
-         	for(var item in UserData ){
-         		console.log(item +":"+UserData[item])
-            	 console.log(allUserData)
-         	}
+          for(var item in UserData ){
+            // console.log(item +":"+UserData[item])
+               // console.log(allUserData)
+          }
  
          }
        }
@@ -67,8 +68,8 @@
 //A function that takes two parameters,the last one that callback function
 
       function getInput (options,callback){
-      	 allUserData.push (options);
-      	 callback (options);
+         allUserData.push (options);
+         callback (options);
       }
 
 
@@ -81,21 +82,21 @@
       callback(generalLastName,options)
     }
     function getInput(options,callback){
-    	allUserData.push(options);
-    	if (typeof callback === "function") {
-    		callback(options)
-    	};
+      allUserData.push(options);
+      if (typeof callback === "function") {
+        callback(options)
+      };
     }
 
 //含有this对象的回调函数的调用处理
     var  clientData = {
-    	id: 094545,
-    	fullName:"not set",
-    	  // setUserName is a method on the clientData object
-    	setUserName:function (firstName,lastName){
-    		// this refers to the fullName property in this object`
-    		this.fullName = firstName+"和"+lastName;
-    	}
+      id: 094545,
+      fullName:"not set",
+        // setUserName is a method on the clientData object
+      setUserName:function (firstName,lastName){
+        // this refers to the fullName property in this object`
+        this.fullName = firstName+"和"+lastName;
+      }
 
     };
 
@@ -107,8 +108,8 @@
     }
     
     getUserInput ("brake","obama",clientData.setUserName)
-    console.log(clientData.fullName)
-    console.log(window.fullName)
+    // console.log(clientData.fullName)
+    // console.log(window.fullName)
 
     function getUserInput (firstName,lastName,callback,callbackObj){
 
@@ -120,20 +121,17 @@
     }
     getUserInput ("brake","obama",clientData.setUserName,clientData)
 
-     console.log(clientData.fullName)
+     // console.log(clientData.fullName)
 
 
 
     function fn(arg) {
-      console.log(this.arg);
-      console.log(this);
+      // console.log(this.arg);
+      // console.log(this);
     }
     fn(123);
     var o = { fn: fn };
     o.fn(123);
-
-
-
         function changeAgeAndReference(person) {
             person.age = 25;
             person = {
@@ -150,7 +148,7 @@
         };
 
         var personObj2 = changeAgeAndReference(personObj1);
-        console.log(personObj2)
+        // console.log(personObj2)
 
 
 
@@ -162,10 +160,10 @@
             a: "def",
             display3: function () {
                 var a = "sssss";
-                console.log(a);
+                // console.log(a);
             },
             display4: function() {
-                console.log(this.a);
+                // console.log(this.a);
             }
         };
 
@@ -173,18 +171,18 @@
 
         function display1() {
             // var = "hahaha";
-            console.log(a)
+            // console.log(a)
         }
 
         function display2() {
-            console.log(this.a);
+            // console.log(this.a);
         }
 
-        display1();  //  'abc' 
-        display2();  //  'abc'
+        // display1();  //  'abc' 
+        // display2();  //  'abc'
 
-        obj.display3(); //'ssss'
-        obj.display4();  //'def'
+        // obj.display3(); //'ssss'
+        // obj.display4();  //'def'
 
 // display2.call(obj);  //  'def'
 // display1.call(obj);  //  'abc'
@@ -218,9 +216,9 @@ obj.arr = arr;
 arr.push(9);
 obj.arr[0] = 17;
 
-console.log(obj.arr === [17])
-console.log(typeof  obj.arr )
-console.log(obj.arr)
+// console.log(obj.arr === [17])
+// console.log(typeof  obj.arr )
+// console.log(obj.arr)
 
 
 function fn(item1, item2) {
@@ -239,18 +237,17 @@ var y = fn(w);
 var z = fn(w, x);
 
 
-console.log(y);
+// console.log(y);
 
 var  hhg = $('<div class = "test">');
-console.log(hhg)
+// console.log(hhg)
 
 
 // 阶乘函数
 
 let jcf = function (num){
       return num>1 ? num * jcf(num-1) : 1;
-}
-
+    }
 
 //正则表达式
 
@@ -261,13 +258,32 @@ var stat = reg.test("sxuek");
 
 
 (function (){
-  return  typeof arguments
+  // console.log(typeof arguments)
 })()
 
+function foo (){
+  var ss = 1
+  ss =+ 8;
+  console.log (ss)
+  console.count('foo被执行的次数：' );
+}
+// console.log(document.body);
+// console.dir(document.body)
 
+console.time( "Arr")
+var aay = [];
+for (var i = 23;i >= 0; i --) {
+     aay[i] = 23-i;
+
+     };
+     // console.dir(aay);
+     // console.log(aay)
+// console.timeEnd("Arr")
+  console.log(new Date().getFullYear())
+console.log(234+"yykj")
 
 
 })
-</script>
-</html>
 
+    </script>
+</html>
