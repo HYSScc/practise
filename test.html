@@ -292,8 +292,32 @@ var a = document.createElement('a');
 
 //页面中的id元素会创建全局变量
 // <div id="vary"></div>
-console.log(vary)
+// console.log(vary)
 
+//对2018-1-14 18:56 时间格式的分装
+　function getDateTime(dt) {
+
+　　　　// 先获取我们需要的所有的元素哦~
+            var year=dt.getFullYear();
+            var month=dt.getMonth()+1;
+            var day=dt.getDate();
+            var h=dt.getHours();
+            var m=dt.getMinutes();
+            var s=dt.getSeconds();
+
+　　　　// 这里应该想一下，如果是个数怎么办？那就用三元表达式来处理
+            month=month<10?"0"+month:month;
+            day=day<10?"0"+day:day;
+            h=h<10?"0"+h:h;
+            m=m<10?"0"+m:m;
+            s=s<10?"0"+s:s;
+
+　　　　// 下面可以返回了
+            return year+"年"+month+"月"+day+"日"+h+"时"+m+"分"+s+"秒";
+        }
+
+　　// 把这个方法放入我们项目的js文件中，当我需要的时候直接调用就可以了。
+        // getDateTime(new Date());
 
 
 
