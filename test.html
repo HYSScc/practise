@@ -39,6 +39,8 @@
             <input name="search" type="search" value="请输入：">
         </form>
         <div id="vary">全剧变量</div>
+        <h2>文本渐变很流行</h2>
+        <a class="assd" href="www.baidu.com">请点击</a>
     </body>
     <script type="text/javascript" src="./jquery-1.12.0.js"></script>
     <script type="text/javascript">
@@ -281,14 +283,14 @@ for (var i = 23;i >= 0; i --) {
      // console.log(aay)
 // console.timeEnd("Arr")
   console.log(new Date().getFullYear())
-console.log(234+"yykj")
+// console.log(234+"yykj")
 
 
 
 var a = document.createElement('a');
  a.href = 'http://www.cnblogs.com/wayou/p/';
- console.log(a.host);
- console.log(a.href)
+//  console.log(a.host);
+//  console.log(a.href)
 
 //页面中的id元素会创建全局变量
 // <div id="vary"></div>
@@ -317,7 +319,7 @@ var a = document.createElement('a');
         }
 
 　　// 把这个方法放入我们项目的js文件中，当我需要的时候直接调用就可以了。
-        getDateTime(new Date());
+        // getDateTime(new Date());
 
 //通过重写alert记录alert的次数
 (function() {
@@ -332,16 +334,58 @@ var a = document.createElement('a');
 // alert('kjk')
 
 var a = 1,b = 2;a = [b,b=a][0];
-console.log(a,b)
+// console.log(a,b)
 
+//文本渐变
+var arr = [1,2,3,4];
+arr.forEach(function(val,key){
+    // console.log(val,key)
+})
 
+// arr.forEach((v,i) => console.log(v,i))
 
+//自定义类
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    //实例方法
+    sayName() {
+        console.log('实例'+this.name);
+    }
+}
+class Programmer extends Animal {
+    constructor(name) {
+        //直接用父类构造器进行初始化
+        super(name);
+    }
+    program() {
+        console.log("I'm codimng...")
+    }
+}
+//测试我们的类
+var  animal = new Animal('false_create');
+wayou = new Programmer('wayou');
+// animal.sayName();
+// wayou.sayName();
+// wayou.program();
 
-
-
-
-
-
+//增强的对象字面量
+ 
+var human = {
+    breathe(){
+        console.log('breathing...')
+    }
+}
+var workers = {
+    __proto__:human,//设置此对象的原型为human，相当于继承human.
+    company:'zhenchuanpracticeCenter',
+    work(){
+        console.log('working...')
+    }
+}
+human.breathe();
+workers.breathe();
 
 
 
