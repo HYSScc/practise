@@ -317,7 +317,33 @@ var a = document.createElement('a');
         }
 
 　　// 把这个方法放入我们项目的js文件中，当我需要的时候直接调用就可以了。
-        // getDateTime(new Date());
+        getDateTime(new Date());
+
+//通过重写alert记录alert的次数
+(function() {
+    var oldAlert = window.alert,
+        count = 0;
+    window.alert = function(a) {
+        count++;
+        oldAlert(a + "--"+count+"次" );
+    };
+})();
+alert("Hello World");
+alert('kjk')
+
+var a = 1,b = 2;a = [b,b=a][0];
+console.log(a,b)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
