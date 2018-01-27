@@ -446,8 +446,23 @@ workers.breathe();
 //       var origin = new Point(0, 0);
 //       console.log(origin);
 
+//symbols 基本类型 和 布尔值 数字 undefined一样
+      (function (){
+          //创建symbol
+          var key = Symbol("key");
 
+          function MyClass(privateData){
+              this[key] = privateData;
+          }
 
+          MyClass.prototype = {
+              dosStuff:function (){
+                  this[key]
+              }
+          };
+      })();
+ var c = new MyClass("hello")
+      c["key"] === undefined//无法访问该属性，因为是私有的
 
 })
 
