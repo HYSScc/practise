@@ -287,3 +287,5 @@ Become a sponsor to get your logo on our README on Github.
 
 [backers-image]: https://opencollective.com/gulpjs/backers.svg
 [sponsors-image]: https://opencollective.com/gulpjs/sponsors.svg
+
+//软件开发工具包    SDK

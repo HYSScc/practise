@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67996808-4d7c-42e5-962a-e699fd348ee9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/study_md/帐号密码.txt" afterPath="$PROJECT_DIR$/study_md/帐号密码.txt" />
-      <change beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
-    </list>
+    <list default="true" id="67996808-4d7c-42e5-962a-e699fd348ee9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="464" column="44" lean-forward="false" selection-start-line="464" selection-start-column="44" selection-end-line="464" selection-end-column="44" />
+            <state relative-caret-position="215">
+              <caret line="458" column="13" lean-forward="true" selection-start-line="458" selection-start-column="13" selection-end-line="458" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -52,8 +48,8 @@
     <handled-path value="$PROJECT_DIR$/angular/angular-example/angular-example/新闻系统单页/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="977" />
-    <option name="y" value="190" />
+    <option name="x" value="773" />
+    <option name="y" value="221" />
     <option name="width" value="871" />
     <option name="height" value="688" />
   </component>
@@ -121,16 +117,15 @@
       <workItem from="1511784591775" duration="780000" />
       <workItem from="1516428861409" duration="8813000" />
       <workItem from="1516504155000" duration="1007000" />
-      <workItem from="1517020106345" duration="1271000" />
+      <workItem from="1517020106345" duration="2694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14833000" />
+    <option name="totallyTimeSpent" value="16256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="977" y="190" width="871" height="688" extended-state="0" />
-    <editor active="true" />
+    <frame x="773" y="221" width="871" height="688" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -212,8 +207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="464" column="44" lean-forward="false" selection-start-line="464" selection-start-column="44" selection-end-line="464" selection-end-column="44" />
+        <state relative-caret-position="215">
+          <caret line="458" column="13" lean-forward="true" selection-start-line="458" selection-start-column="13" selection-end-line="458" selection-end-column="13" />
           <folding />
         </state>
       </provider>
