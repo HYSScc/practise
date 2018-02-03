@@ -464,6 +464,33 @@ workers.breathe();
  var c = new MyClass("hello")
       c["key"] === undefined//无法访问该属性，因为是私有的
 
+
+     //JS基本数值类型
+     //number  string  bolean  undefined null object symbol
+
+//对象的克隆
+      function shallowcopy (obj){
+      if(typeof obj !== "object"){
+          return;
+      }
+       var newobj = obj instanceof Array ? []:{}
+        for (var key in  obj){
+          if(obj.hasOwnProperty(key)){
+              newobj[key] = obj[key];
+          }
+        }
+      return  newobj;
+
+      }
+
+
+
+
+
+
+
+
+
 })
 
     </script>
