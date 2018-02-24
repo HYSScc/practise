@@ -1,4 +1,4 @@
-General
+  #### General
 * Ctrl+Shift+P, F1 Show Command Palette
 * Ctrl+P Quick Open, Go to File…
 * Ctrl+Shift+N New window/instance
@@ -140,3 +140,287 @@ General
 * Keyboard shortcuts for Windows
 * Other operating systems’ keyboard shortcuts and additional
 * unassigned shortcuts available at aka.ms/vscodekeybindings
+
+
+
+一般
+* Ctrl+Shift+P, F1显示命令调色板。
+* Ctrl + P快速打开,去文件…
+
+* Ctrl + Shift + N新窗口/实例
+
+* Ctrl + Shift + W关闭窗口/实例
+
+* Ctrl +、用户设置
+
+* Ctrl+K Ctrl+S键盘快捷键。
+
+* 基本编辑
+
+* Ctrl+X切割线(空选区)
+
+* Ctrl+C复制行(空选)
+
+* Alt +↑或↓线向上/向下移动
+
+* Shift + Alt +↓/↑复制线向上/向下
+
+* Ctrl + Shift + K删除线
+
+* 按Ctrl+Enter插入线。
+
+* Ctrl+Shift+Enter Insert line。
+
+* Ctrl+Shift+\跳转到匹配括号。
+
+* (Ctrl+) /[缩进/缩进线]。
+
+* 家/端到线的开始/结束。
+
+* 按Ctrl+Home键开始文件。
+
+* 按Ctrl+End结束文件。
+
+* Ctrl +↑或↓线向上/向下滚动
+
+* Alt+PgUp / PgDn滚动页面向上/向下。
+
+* Ctrl+Shift+[折叠(折叠)区域。
+
+* 按Ctrl+Shift+]展开(未折叠)区域。
+
+* 按Ctrl+K Ctrl+[折叠(折叠)所有子区域。
+* 
+* 按Ctrl+K Ctrl+]展开(未折叠)所有分区。
+* 
+* 按Ctrl+K Ctrl+0折叠(折叠)所有区域。
+* 
+* 按Ctrl+K Ctrl+J展开(未折叠)所有区域。
+* 
+* 按Ctrl+K Ctrl+C添加行注释。
+
+* Ctrl+K Ctrl+U删除行注释。
+
+* Ctrl+/切换行注释。
+
+* Shift+Alt+A切换块注释。
+
+* Alt+Z切换单词换行。
+
+* 导航
+
+* Ctrl+T显示所有符号。
+
+* 按Ctrl+G去排队…
+* 
+* 按Ctrl+P点击文件…
+* 
+* 按Ctrl+Shift+O去标记…
+
+* Ctrl+Shift+M显示问题面板。
+
+* F8进入下一个错误或警告。
+
+* Shift+F8去之前的错误或警告。
+
+* Ctrl+Shift+Tab导航编辑器组历史。
+
+* Alt +←/→后退/前进
+
+* Ctrl+M切换Tab移动焦点。
+
+* 搜索和替换
+
+* Ctrl + F
+
+* Ctrl + H代替
+
+* F3 / Shift+F3找到下一个/之前。
+
+* Alt+Enter选择所有发现匹配的发生。
+
+* 按Ctrl+D添加选择到下一个查找匹配。
+
+* 按Ctrl+K Ctrl+D，选择最后一个匹配项。
+
+* Alt+C / R / W切换大小写/ regex /全字。
+
+* Multi-cursor和选择
+
+* Alt +点击插入光标
+
+* 按Ctrl + Alt +↑或↓插入光标上面/下面
+
+* 按Ctrl+U撤消最后的光标操作。
+
+* Shift+Alt+我在每一行的末尾插入光标。
+
+* Ctrl+I选择当前行。
+
+* Ctrl+Shift+L选择当前选中的所有选项。
+
+* Ctrl+F2选择当前单词的所有出现。
+
+* Shift + Alt +→扩展选择
+
+* Shift + Alt +←缩小选择
+
+* + Alt +转变
+
+* (拖动鼠标)
+
+* 列(箱)的选择
+
+* Ctrl + Shift + Alt
+
+* +(箭头键)
+
+* 列(箱)的选择
+
+* Ctrl + Shift + Alt
+
+* + PgUp / PgDn
+
+* 栏(框)选择页向上/向下。
+
+* 丰富语言编辑
+
+* Ctrl + Space触发的建议
+
+* Ctrl+Shift+空格触发参数提示。
+
+* Shift + Alt + F格式文档
+
+* 按Ctrl+K Ctrl+F格式选择。
+
+* F12去定义。
+
+* Alt + F12 Peek的定义
+
+* Ctrl+K F12打开定义。
+
+* Ctrl +。快速修复
+
+* Shift + F12显示引用
+
+* F2重命名符号
+
+* Ctrl+K Ctrl+X修剪后的空白。
+
+* Ctrl+K M改变文件语言。
+
+* 编辑管理
+
+* Ctrl+F4, Ctrl+W关闭编辑器。
+
+* Ctrl+K F关闭文件夹。
+
+* Ctrl + \分割编辑器
+
+* 按Ctrl+ 1 / 2 / 3将焦点对准1。
+
+* st, 2或3编辑组。
+
+* Ctrl + K Ctrl +←/→集中到前/下一个编辑器组
+
+* Ctrl+Shift+PgUp / PgDn移动编辑器左/右。
+
+* Ctrl + K←/→移动活动编辑器组
+
+* 文件管理
+
+* Ctrl + N新文件
+
+* Ctrl + O打开的文件……
+
+* 按Ctrl + S保存
+
+* Ctrl + Shift + S另存为…
+
+* 按Ctrl+K S保存所有文件。
+
+* Ctrl + F4关闭
+
+* 按Ctrl+K Ctrl+W关闭所有。
+
+* Ctrl+Shift+T重新打开编辑器。
+
+* Ctrl+K Enter保持预览模式编辑器打开。
+
+* Ctrl + Tab开放
+
+* Ctrl + Shift + Tab打开之前
+
+* Ctrl+K P拷贝路径的活动文件。
+
+* Ctrl+K R显示在浏览器中的活动文件。
+
+* 在新窗口/实例中显示活动文件。
+
+* 显示
+
+* F11切换全屏。
+
+* Shift+Alt+1切换编辑器布局(水平/垂直)
+
+* Ctrl+ = / -放大/缩小。
+
+* Ctrl+B切换侧边栏的可见性。
+
+* Ctrl+Shift+E Show Explorer / Toggle焦点。
+
+* Ctrl + Shift + F显示搜索
+
+* Ctrl+Shift+G显示源码控制。
+
+* Ctrl + Shift + D显示调试
+
+* Ctrl + Shift + X显示扩展
+
+* 按Ctrl+Shift+H替换文件。
+
+* Ctrl+Shift+J切换搜索细节。
+
+* Ctrl+Shift+U显示输出面板。
+
+* Ctrl+Shift+V打开Markdown预览。
+
+* Ctrl+K V打开标记预览到侧边。
+
+* Ctrl+K Z Zen模式(Esc Esc退出)
+
+* 调试
+
+* F9 Toggle breakpoint
+
+* F5启动/继续
+
+* Shift + F5停止
+
+* F11 / Shift+F11 Step into/out。
+
+* F10跨过
+
+* 按Ctrl+K Ctrl+我显示鼠标悬停。
+
+* 集成终端
+
+* Ctrl+ '显示集成终端。
+
+* Ctrl+Shift+ '创建新的终端。
+
+* 选择Ctrl + C副本
+
+* Ctrl+V粘贴到活动终端。
+
+* Ctrl +↑或↓向上/向下滚动
+
+* Shift+PgUp / PgDn滚动页面向上/向下。
+
+* Ctrl+Home / End Scroll to top/bottom。
+
+* Windows的键盘快捷键。
+
+* 其他操作系统的键盘快捷键和附加功能。
+
+* 在aka.ms/vscodekeybindings中有未分配的快捷方式
