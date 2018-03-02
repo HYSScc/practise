@@ -40,8 +40,24 @@
         </form>
         <div id="vary">全剧变量</div>
         <h2>文本渐变很流行</h2>
-        <a class="assd" href="www.baidu.com">请点击</a>
+        <div class="assd">移入移除</div>
+        <a class="asssd" href="www.baidu.com">请点击</a>
     </body>
+    <style>
+    .assd{
+        width: 200px;
+        height: 300px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 30px;
+        color:aqua;
+        cursor: pointer;
+        border: 2px dashed black;
+        }
+    .zhezhao{
+        color: brown;
+    }
+    </style>
     <script type="text/javascript" src="./jquery-1.12.0.js"></script>
     <script type="text/javascript">
         
@@ -250,7 +266,7 @@ var  hhg = $('<div class = "test">');
 
 let jcf = function (num){
       return num>1 ? num * jcf(num-1) : 1;
-    }
+    };
 
 //正则表达式
 
@@ -262,7 +278,7 @@ var stat = reg.test("sxuek");
 
 (function (){
   // console.log(typeof arguments)
-})()
+})();
 
 function foo (){
   var ss = 1
@@ -461,8 +477,8 @@ workers.breathe();
               }
           };
       })();
- var c = new MyClass("hello")
-      c["key"] === undefined//无法访问该属性，因为是私有的
+ // var c = new MyClass("hello");
+ //      c["key"] === undefined//无法访问该属性，因为是私有的
 
 
      //JS基本数值类型
@@ -483,9 +499,26 @@ workers.breathe();
 
       }
 
+//es6新特性 function 后面加* 的函数直接返回一个迭代器
+ function * gen(){
+     yield1;
+     yield2;
+     yield3;
+ }
+ console.log(gen());
 
 
+var arr=[2,3,5,5,90];
+console.log(Math.max(3,3,6));
+console.log(Math.max.apply(Math,arr));
+console.log(Math.max.call(Math,arr[0],arr[4]));
+//console.log(Math(arr));
 
+$(".assd").mouseenter(function(){
+    $(this).addClass('zhezhao');
+    }).mouseleave(function(){
+        $(this).removeClass('zhezhao');
+    })
 
 
 
