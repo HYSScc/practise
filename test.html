@@ -42,6 +42,12 @@
         <h2>文本渐变很流行</h2>
         <div class="assd">移入移除</div>
         <a class="asssd" href="www.baidu.com">请点击</a>
+        <table class="table">
+            <tr><td>第一行</td></tr>
+            <tr><td>第二行</td></tr>
+            <tr><td>第三行</td></tr>
+            <tr><td>第四行</td></tr>
+        </table>
     </body>
     <style>
     .assd{
@@ -56,6 +62,15 @@
         }
     .zhezhao{
         color: brown;
+    }
+    .table tr:nth-child(odd){
+        background-color: white;
+    }
+    .table tr:nth-child(even){
+        background-color: #cccccc;
+    }
+    .table tr:hover{
+        background-color: yellow;
     }
     </style>
     <script type="text/javascript" src="./jquery-1.12.0.js"></script>
@@ -518,7 +533,14 @@ $(".assd").mouseenter(function(){
     $(this).addClass('zhezhao');
     }).mouseleave(function(){
         $(this).removeClass('zhezhao');
-    })
+    });
+
+      var arr1 = [2,3,4,5,6];
+      var arr2 = arr1.splice(1,2,'newsvalue');
+      var arr3 = arr1.slice(0,-1);
+      console.log(arr1); //2,newsvaslue,5,6
+      console.log(arr2); //5,6
+      console.log(arr3); //2,newsvalue,5
 
 
 
@@ -526,6 +548,42 @@ $(".assd").mouseenter(function(){
 
 
 })
+
+    </script>
+    <script language="JavaScript">
+        //
+        // 输出所有页面宽度和高度大于50px的节点
+        //
+        function traverse (){
+           var arr = [];
+           var elements =[];
+           console.log(document.all);
+            if(document.all){
+               elements = document.all;
+            }else{
+               elements = document.getElementsByTagName('*');
+            }
+            console.log(elements.length);
+            console.log(elements[25]);
+            for (var i=0;i<elements.length;i++){
+                var ele = elements[i];
+                // console.log(ele.tagName);
+                //width  输出字符串 offsetWidth返回的是带边框的number型的数字
+                var Width = ele.offsetWidth || parseFloat(ele.style.width);
+                var Height = ele.offsetHeight || parseFloat(ele.style.height);
+                if(Width>50 && Height>100){
+                    arr.push(ele);
+                }
+            }
+            console.log(arr);
+            return arr;
+
+        }
+        // window.onload = function(){
+        //     console.log(traverse());
+        //
+        // };
+
 
     </script>
 </html>
