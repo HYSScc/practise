@@ -543,8 +543,54 @@ $(".assd").mouseenter(function(){
       console.log(arr3); //2,newsvalue,5
 
       var data = {a:1,b:2,c:3,d:4};
-      console.log() Object.keys(data).filter(function(x){return data[x]>2;} );
-      console.log(Object.keys(data))
+      console.log( Object.keys(data).filter(function(x){return data[x]>2;} ));
+      console.log(Object.keys(data));
+      //是代码支持a.name = "name1",b.name = 'name2'
+      function obj (name) {
+          if(name){this.name = name;};
+          return this;
+      };
+      obj.prototype.name='name2';
+      var a=obj('name1');
+      var b=new obj;
+//js如何获取和设置cookies
+      //创建cookie
+      function setCookie(name,value,expires,path,domain,secure){
+          var cookieText = encodeURIComponent(name)+'='+encodeURIComponent(value);
+          if(expires instanceof Date){
+              cookieText+=';expires=' + expires;
+          };
+          if(path){
+              cookieText+=';expires=' + expires;
+          };
+          if(domain){
+              cookieText+=';domain=' + domain;
+          };
+          if(secure){
+              cookieText+=';secure=' + secure;
+          };
+          document.cookie=cookieText;
+      };
+      //获取cookie
+      function getCookie(name){
+          var cookieName = encodeURIComponent(name) +'=';
+          var cookieStart = document.cookie.indexOf(cookieName);
+          var cookieValue = null;
+          if(cookieStart>-1){
+              var cookieEnd = document.cookie.indexOf(';',cookieStart);
+              if(cookieEnd==-1){
+                  cookieEnd = document.cookie.length;
+              }
+              cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieValue.length,cookieEnd))
+          }
+          return cookieValue;
+      }
+      //删除cookie
+      function unsetCookie(name){
+          document.cookie = name + "=;expires=" + new Date(0);
+      }
+
+
 
 
 
