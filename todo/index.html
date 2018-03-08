@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="todo">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=414">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script> -->
+	<!-- <script src="http://cnd.bootcss.com/jquery/2.2.4/jquery.js"></script> -->
+	<script type="text/javascript" src="./jquerywenjian/jquery-2.2.1.js">	</script>
+    <!--  <script src="./js/index.js"></script> -->
+	<script src="angularjs/angular.js">	</script>
+	<script src="angularjs/angular-animate.js"></script>
+	<script type="text/javascript" src="./js/main.js">
+
+	</script>
+</head>
+<body ng-controller="mainCtrl">
+	<div class="todos">
+      <div class="header">
+         <h2 ng-bind="title"></h2>
+      </div>
+		 <div class="todo-list">
+            <ul class="list-container" ng-init="tiaojain='' ">
+			    <li  class="shuru">
+				    <span class="tubiao"> </span>
+				    <input type="text" placeholder="What needs to be done?" ng-model="name" ng-keyup="add($event);save()" autofocus>
+			    </li>
+        	    <li class="list " ng-repeat="v in todos | filter:{isDone:tiaojian} track by v.id" ng-class="{finish:v.isDone,edit:ed}"ng-init="ed=false" ng-dblclick="ed=true;focus($event)">
+				    <div class="wancheng" ng-click="v.isDone=!v.isDone ;save()">✅</div>
+				    <p ng-bind="v.name"></p>
+				    <input type="text" name="name" ng-model="v.name" ng-blur="ed=false" ng-change="save()">
+                    <span class="delete"ng-click="delete(v.id);save()">⨯</span>
+			    </li>
+            </ul>
+            <div class="footer"style="width:100%;height:40px;">
+            	<!-- <div class="clear" style="width:40px;height:40px;background:red;float:left" ng-bind="(todos|filter:{isDone=key}).length"></div> -->
+            	 <div class="left"></div>
+            	<span style="width:50px;height:40px" ng-click="tiaojian=''"ng-class="{active:key}"ng-click="key=true">全部</span>
+			    <span style="width:50px;height:40px" ng-click="tiaojian=true"ng-class="{active:tiaojian}">完成</span>
+			   	<span style="width:60px;height:40px;margin-right:25px;"ng-click="tiaojian=false" ng-class="{active:key}"ng-click="key=true">未完成</span>
+			   	<span class="clear">清除已完成</span>
+            </div>
+		 </div>
+	</div>
+	<!-- <h2>{{aa}}</h2>
+    <ul>
+    	<li ng-repeat="v in todos">
+    		<span>{{v.name}}</span>
+    		<span>{{v.zuozhe}}</span>
+    		<span>{{v.time}}</span>
+    		<span ng-click=cc($index)>delete</span>
+    	</li>
+    </ul> -->
+</body>
+</html>

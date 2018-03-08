@@ -1,0 +1,144 @@
+*{
+  padding:0;
+  margin: 0;
+}
+.todos{
+  width: 400px;
+  min-height: 50px;
+  // border: 1px solid black;
+  margin: 0 auto;
+  // font-family: "sans-serif";
+  // font-family: "Arial,Helvetica,sans-serif";
+  font-family: "微软雅黑";
+  .header{
+    margin-top: 10px;
+    width:100%;
+    height: 50px;
+    text-align: center;
+    background: #f4f4f4;
+    h2{
+        margin:0 auto;
+        font-size: 30px;
+        line-height: 50px;
+        color: #aaa;
+        font-weight: 600;
+    }
+  }
+  .todo-list{
+    width: 100%;
+    // border: 1px solid black;
+    ul{
+      width: 100%;
+      min-height:40px;
+      li.shuru{
+        display: block;
+        width: 100%;
+        height: 40px;
+        position: relative;
+        input{
+          display: block;
+          outline: none;
+
+          width: 87%;
+          height: 40px;
+          box-sizing: border-box;
+          padding-left: 0px;
+          font-size: 20px;
+          text-align: left;
+        }
+        .tubiao{
+          width: 40px;
+          height: 40px;
+          background: #B24624;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+       li{
+         width: 100%;
+         height: 40px;
+         line-height: 40px;
+         display: block;
+        //  background:#79A795;
+         border-bottom:1px solid #ccc;
+         position: relative;
+         .wancheng{
+           width: 40px;
+           height: 40px;
+          //  background:#277E0F;
+           position: absolute;
+           top: 0px;
+           left: 0px;
+           font-size: 30px;
+           color: #868989;
+           text-align: center;
+           line-height: 40px;
+         }
+         p{
+           width:310px;
+           height: 40px;
+           position: absolute;
+           line-height: 40px;
+           font-size: 20px;
+           top: 0;
+           right:40px;
+         }
+         input{
+           display: none;
+           width: 348px;
+           height: 40px;
+           text-align: left;
+           font-size: 20px;
+           line-height:40px;
+           box-sizing: border-box;
+           border: 1px solid #ccc;
+           position: absolute;
+           z-index: 1;
+           top: 0;
+           left: 50px;
+          //  border: none;
+           outline: none;
+         }
+         .delete{
+           width: 30px;
+           height: 30px;
+           text-align: center;
+           line-height:30px;
+           position: absolute;
+           top: 5px;
+           right: 5px;
+           display: none;
+           color: #CB5008;
+           font-weight:bold;
+           font-size: 25px;
+       }
+       &:hover .delete{
+         display: block;
+         opacity: 0.8;
+       }
+    }
+    li.edit{
+        input{
+          display: block;
+          font-size: 20px;
+          line-height: 40px;
+        }
+        .delete{
+          display: none;
+        }
+        p{
+          display: none;
+        }
+    }
+    li.finish{
+       .wancheng{
+         color: green;
+       }
+       p{
+         text-decoration: line-through;
+       }
+    }
+  }
+}
+}

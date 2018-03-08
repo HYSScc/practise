@@ -1,0 +1,208 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.todos {
+  width: 400px;
+  min-height: 50px;
+  margin: 0 auto;
+  font-family: "微软雅黑";
+}
+
+.todos .header {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.todos .header h2 {
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 50px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+.todos .todo-list {
+  width: 100%;
+  border: 1px solid #B4B7AA;
+  box-sizing:border-box;
+}
+
+.todos .todo-list ul {
+  width: 100%;
+  min-height: 40px;
+}
+
+.todos .todo-list ul li.shuru {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.todos .todo-list ul li.shuru input {
+  display: block;
+  outline: none;
+  width: 87%;
+  height: 40px;
+  box-sizing: border-box;
+  padding-left: 0px;
+  font-size: 20px;
+  text-align: left;
+  border:none;
+}
+
+.todos .todo-list ul li.shuru .tubiao {
+  width: 40px;
+  height: 40px;
+  background: #B24624;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.todos .todo-list ul li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.todos .todo-list ul li .wancheng {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 25px;
+  color: #868989;
+  /*font-weight: bold;*/
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.todos .todo-list ul li p {
+  width: 310px;
+  height: 40px;
+  position: absolute;
+  line-height: 40px;
+  font-size: 20px;
+  top: 0;
+  right: 40px;
+  opacity: 0.6;
+}
+
+.todos .todo-list ul li input {
+  display: none;
+  width: 348px;
+  height: 40px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50px;
+  outline: none;
+}
+
+.todos .todo-list ul li .delete {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  /*display: none;*/
+  opacity: 0.5;
+  color: #980D0D;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.todos .todo-list ul li:hover .delete {
+  display: block;
+  color:#ED0F08;
+  opacity: 1;
+}
+
+.todos .todo-list ul li.edit input {
+  display: block;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.todos .todo-list ul li.edit .delete {
+  display: none;
+}
+
+.todos .todo-list ul li.edit p {
+  display: none;
+}
+
+.todos .todo-list ul li.finish .wancheng {
+  color: green;
+}
+
+.todos .todo-list ul li.finish p {
+  text-decoration: line-through;
+}
+.todos .todo-list ul li.finish .delete {
+  color: green;
+}
+.todos .todo-list .list{
+  transition:all 0.8s cubic-bezier(0, 0.99, 0.88, 0.99);
+}
+.todos .todo-list .list.ng-enter{
+  transform:translateX(100%);
+}
+.todos .todo-list .list.ng-enter-active{
+  transform:translateX(0);
+}
+.todos .todo-list .list.ng-leave{
+  transform:translateX(0);
+}
+.todos .todo-list .list.ng-leave-active{
+  /*transform:translateX(-100%);*/
+  height: 0;
+   opacity: 0;
+}
+.footer{
+  position:relative;
+  height: 40px;
+  padding-left:  105px;
+  line-height: 40px;
+  /*text-align: center;*/
+}
+.footer .left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: red;
+  opacity: 0.1;
+}
+.footer span{
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+}
+.footer span.active{
+  background: #A77115;
+  color:#ddd;
+}
+
