@@ -77,14 +77,14 @@
                       }
                   }
                   $scope.todos.splice(index,1);
-              }
+              };
               $scope.focus=function(e){
                 $timeout(function(){
                   $(e.currenTarget)
                   .find('input')
                   .trigger('focus')
                 },0)               
-              }              
+              };
               $scope.add=function(e){
                 if (e.keyCode===13) {
                   var id;
@@ -108,7 +108,7 @@
                      console.table($scope.todos)         
                 }  
 
-              }
+              };
               $scope.save=function(){
                   localStorage.database=JSON.stringify($scope.todos)
               }

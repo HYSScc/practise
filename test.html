@@ -546,13 +546,13 @@ $(".assd").mouseenter(function(){
       console.log( Object.keys(data).filter(function(x){return data[x]>2;} ));
       console.log(Object.keys(data));
       //是代码支持a.name = "name1",b.name = 'name2'
-      function obj (name) {
+      function Obj (name) {
           if(name){this.name = name;};
           return this;
       };
-      obj.prototype.name='name2';
-      var a=obj('name1');
-      var b=new obj;
+      // obj.prototype.name='name2';
+      var a=Obj('name1');
+      var b=new Obj;
 //js如何获取和设置cookies
       //创建cookie
       function setCookie(name,value,expires,path,domain,secure){
@@ -590,9 +590,20 @@ $(".assd").mouseenter(function(){
           document.cookie = name + "=;expires=" + new Date(0);
       };
 
+      var  bar = null;
+      console.log(typeof bar === "object"); //true
+      console.log((typeof bar !== null)&&(typeof bar === "object"));
+      console.log((typeof bar !== null)&&((typeof bar ==="object")||(typeof bar === "function")));
+      console.log(typeof bar === null);
+      console.log((bar !== null) && (typeof bar === "object") && (toString.call(bar) !== "[object Array]"));
 
 
-
+      //          a=4;
+      //          b=7;
+      //
+      // console.log(typeof a === undefined);
+      // console.log(typeof b === undefined);
+      // console.log(b === undefined);
 
 
 })
