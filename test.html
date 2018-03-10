@@ -597,13 +597,45 @@ $(".assd").mouseenter(function(){
       console.log(typeof bar === null);
       console.log((bar !== null) && (typeof bar === "object") && (toString.call(bar) !== "[object Array]"));
 
+      (function (){
+            var acce=bccd=86;
+            // bccd=85;
+            // var acce=bccd;
+      })();
 
-      //          a=4;
-      //          b=7;
-      //
-      // console.log(typeof a === undefined);
-      // console.log(typeof b === undefined);
-      // console.log(b === undefined);
+
+      console.log(typeof acce);//undefined
+      console.log(typeof bccd);//number
+      console.log(typeof bbc);//undefined
+
+
+      var myObject =  {
+          foo: "bar",
+          func:function(){
+              var self = this;
+              console.log("outer.func:  this.foo=" + this.foo);//bar
+              console.log("outer.func:  self.foo=" + self.foo);//bar
+              (function (){
+                  console.log("inner.func: this.foo=" + this.foo);//undefined
+                  console.log("inner.func: self.foo=" + self.foo);//bar
+              }())
+          }
+      };
+      myObject.func();
+
+       function foo1 (){
+           return {
+               bar:"hello"
+           };
+       }
+       function foo2 (){
+           return {
+               bar:"hello"
+           };
+       }
+      console.log(foo1())
+      console.log(foo2())
+
 
 
 })
