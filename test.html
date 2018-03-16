@@ -638,6 +638,40 @@ $(".assd").mouseenter(function(){
 
 //数组去重
 //有俩个地方需要注意：1、返回值是否是当前引用，2、“重复”的判断条件
+Array.prototype.uniq = function() {
+if(this.length<=1){
+    return this.slice(0);
+}
+var aResult = [];
+for(var i = 0;i<this.length;i++){
+    if(!_fExist(aResult,this[i])){
+        aResult.push(this[i]);
+    }
+}
+return aResult;
+//判断是否重复
+function _fExist(aTmp,o){
+    if(aTmp.length===0){
+        return  false;
+    }
+    var temp;
+    for(var j = 0;j<aTmp.length;j++){
+        var temp = aTmp[j];
+        if(temp===o){
+            return true;
+        }
+        //NaN需要特殊处理
+        if(!o&&!temp&&temp!==undefined&&o!==undefined&&isNaN(temp)&&isNaN(o)){
+            return true;
+        }
+    }
+    return  false;
+}
+}
+var Arrayone=[1,1,3,'d','e','e',','];
+console.log(Arrayone);
+console.log(Arrayone.uniq());
+
 
 
 
