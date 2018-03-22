@@ -703,27 +703,46 @@ function whatBrowser (){
 console.log(whatBrowser());
 
 
-//冒泡排序法的实现
-function bubbleSort(arr) {
-    var i = arr.length, j;
-    var tempExchangVal;
-    while (i > 0) {
-        for (j = 0; j < i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                tempExchangVal = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = tempExchangVal;
+// 冒泡排序法的实现
+// function maopao(arr) {
+//     var i = arr.length, j;
+//     // var tempExchangVal;
+//     var temp;
+//     while (i > 0) {
+//         for (j = 0; j < i - 1; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 // tempExchangVal = arr[j];
+//                 temp = arr[j];
+//                 arr[j] = arr[j + 1];
+//                 // arr[j + 1] = tempExchangVal;
+//                 arr[j+1] = temp;
+//             }
+//         }
+//         i--;
+//     }
+//     return arr;
+// }
+
+
+function maopao(intArr){
+    var i=intArr.length,j;
+    var temp;
+    while (i>o){
+        for(j=0;j<i-1;j++){
+            if(intArr[j]>intArr[j+1]){
+                temp = intArr[j];
+                intArr[j] = intArr[j+1];
+                intArr[j+1] = temp;
             }
         }
         i--;
     }
-    return arr;
+    return intArr;
 }
- 
-var arr = [3, 2, 4, 9, 1, 5, 7, 6, 8];
-var arrSorted = bubbleSort(arr);
+var arr4 = [3, 2, 4, 9, 1, 5, 7, 6, 8];
+var arrSorted = maopao(arr4);
 console.log(arrSorted);
-alert(arrSorted);
+// alert(arrSorted);
 // 控制台将输出：[1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
