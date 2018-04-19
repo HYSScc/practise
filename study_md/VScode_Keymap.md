@@ -14,8 +14,8 @@
 * Ctrl+Enter Insert line below
 * Ctrl+Shift+Enter Insert line above
 * Ctrl+Shift+\ Jump to matching bracket
-* Ctrl+] / [ Indent/outdent line
 * Home / End Go to beginning/end of line
+* Ctrl+] / [ Indent/outdent line
 * Ctrl+Home Go to beginning of file
 * Ctrl+End Go to end of file
 * Ctrl+↑ / ↓ Scroll line up/down
@@ -184,13 +184,9 @@
 * Ctrl +↑或↓线向上/向下滚动
 
 * Alt+PgUp / PgDn滚动页面向上/向下。
-
 * Ctrl+Shift+[折叠(折叠)区域。
-
 * 按Ctrl+Shift+]展开(未折叠)区域。
-
 * 按Ctrl+K Ctrl+[折叠(折叠)所有子区域。
-* 
 * 按Ctrl+K Ctrl+]展开(未折叠)所有分区。
 * 
 * 按Ctrl+K Ctrl+0折叠(折叠)所有区域。

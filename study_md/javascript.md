@@ -22,3 +22,8 @@
 * 采用CDN来加速资源加载
 * 对于JS DOM的优化
 * HTTP 服务器的文件缓存
+#### delete 
+* delete只能删除对象中的属性 
+  例如 delete object.property
+    delete  object['property']
+* delete是不能直接释放内存的，他只是间接的中断对象的使用。
