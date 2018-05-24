@@ -1,0 +1,260 @@
+简单构建 ThinkJS + Vue2.0 前后端分离的多页应用
+
+月影 前端大学  今天
+作者：月影
+zhuanlan.zhihu.com/p/37130118
+最近在使用 ThinkJS + Vue2.0 写一个简单的项目，该项目分为用户端和管理界面，分别对应vue的两个页面index和admin，用户端、管理界面自身是基于vue构建的单页应用，服务端采用thinkjs的提供api。
+项目目录结构如下：
+
+.
+├── README.md
+├── client
+│ ├── README.md
+│ ├── build
+│ ├── config
+│ ├── package.json
+│ ├── src
+│ │ ├── components
+│ │ ├── modules
+│ │ └── pages
+│ │ ├── admin
+│ │ └── index
+│ └── static
+└── server
+    ├── src
+    │ ├── bootstrap
+    │ ├── config
+    │ ├── controller
+    │ │ ├── admin
+    │ │ ├── base.js
+    │ │ ├── home
+    │ │ └── index.js
+    │ ├── logic
+    │ └── model
+    ├── view
+    │ ├── admin.html
+    │ └── index.html
+    └── www
+        └── static
+
+client 的配置
+
+直接使用vue官方的vue-cli创建项目，选择使用webpack构建。
+
+修改config/index.js，给webpack-dev-server添加proxyTable:
+
+proxyTable: {
+      '/api' : {
+        target: 'http://localhost:8360/api/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/'
+        }
+      }
+    },
+然后参照《使用Vue-cli搭建多页面应用时对项目结构和配置的调整》的方法将其改为多页应用，具体方法为：
+
+调整项目目录，创建src/pages/index，将src/assets、src/router、src/App.vue、src/main.js和./index.html移动到该目录中，并将main.js改名为index.js。
+
+修改构建脚本build/utils.js，添加：
+
+// glob是webpack安装时依赖的一个第三方模块，还模块允许你使用 *等符号, 例如lib/*.js就是获取lib文件夹下的所有js后缀名的文件
+var glob = require('glob')
+    // 页面模板
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+// 取得相应的页面路径，因为之前的配置，所以是src文件夹下的pages文件夹
+var PAGE_PATH = path.resolve(__dirname, '../src/pages')
+    // 用于做相应的merge处理
+var merge = require('webpack-merge')
+
+//多入口配置
+// 通过glob模块读取pages文件夹下的所有对应文件夹下的js后缀文件，如果该文件存在
+// 那么就作为入口处理
+exports.entries = function() {
+    var entryFiles = glob.sync(PAGE_PATH + '/*/*.js')
+    var map = {}
+    entryFiles.forEach((filePath) => {
+        var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'))
+        map[filename] = filePath
+    })
+    return map
+}
+
+//多页面输出配置
+// 与上面的多页面入口配置相同，读取pages文件夹下的对应的html后缀文件，然后放入数组中
+exports.htmlPlugin = function() {
+    let entryHtml = glob.sync(PAGE_PATH + '/*/*.html')
+    return entryHtml.map((filePath) => {
+        let filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'))
+        let conf = {
+            // 模板来源
+            template: filePath,
+            // 文件名称
+            filename: filename + '.html',
+            // 页面模板需要加对应的js脚本，如果不加这行则每个页面都会引入所有的js脚本
+            chunks: ['manifest', 'vendor', filename],
+            inject: true
+        }
+        if (process.env.NODE_ENV === 'production') {
+            conf = merge(conf, {
+                minify: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    removeAttributeQuotes: true
+                },
+                chunksSortMode: 'dependency'
+            })
+        }
+        return new HtmlWebpackPlugin(conf)
+    })
+}
+修改build/webpack.base.conf.js的入口配置：
+
+module.exports = {
+  context: path.resolve(__dirname, '../'),
+  entry: utils.entries(),
+
+  ...
+  ...
+}
+修改build/webpack.dev.conf.js和build/webpack.prod.conf.js的插件配置：
+
+plugins: [
+    ...
+
+    // https://github.com/ampedandwired/html-webpack-plugin
+    ...utils.htmlPlugin(),
+
+    ...
+  ]
+创建 src/pages/admin 目录，添加admin.html文件：
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Admin</h1>
+</body>
+</html>
+创建 src/pages/404 目录，添加404.html文件：
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>404</title>
+</head>
+<body>
+  <h1>404 Not Found</h1>
+</body>
+</html>
+修改webpack-dev-server的路由表：
+
+historyApiFallback: {
+      rewrites: [
+        { from: /^\/$/, to: '/index.html' },
+        { from: /^\/admin\/?$/, to: '/admin.html' },
+        { from: /./, to: '/404.html' }
+      ],
+    },
+至此client端的配置就完成了，可以通过 npm start 启动client端，通过 http://localhost:8080 访问页面。
+
+server 的配置
+直接使用ThinkJS官方的think-cli创建项目，修改src/config/router.js，添加路由：
+
+module.exports = [
+  [/^\/api\/(.*)/i, '/:1'],
+  [/^\/$/i, '/'],
+  [/^\/admin\/?$/i, '/index/admin'],
+  [/\//, 'index/_404', 'get']
+];
+修改src/controller/index.js渲染模板：
+
+const Base = require('./base.js');
+
+module.exports = class extends Base {
+  indexAction() {
+    return this.display('index.html');
+  }
+  adminAction() {
+    return this.display('admin.html');
+  }
+  _404Action() {
+    return this.display('404.html');
+  }
+};
+至此服务器的配置完成，启动server端，client 可通过 http://localhost:8080/api 访问API。
+
+开发服务端 API
+
+在 server 中任意 controller 暴露的 API 可以通过 /api/controller/action 来访问，比如：
+
+// src/controller/test.js
+const Base = require('./base.js');
+
+module.exports = class extends Base {
+  indexAction() {
+    return this.success('test');
+  }
+};
+可以通过 http://localhost:8080/api/test 访问：
+
+{
+  errno: 0,
+  errmsg: "",
+  data: "test"
+}
+添加新页面 abc
+在 client 的 src/pages 目录下创建新的页面 src/pages/abc/abc.html，同时修改 webpack.dev.config.js，historyApiFallback 中添加新的页面路由。
+
+historyApiFallback: {
+      rewrites: [
+        { from: /^\/$/, to: '/index.html' },
+        { from: /^\/admin\/?$/, to: '/admin.html' },
+        { from: /^\/abc\/?$/, to: '/abc.html' },
+        { from: /./, to: '/404.html' }
+      ],
+    },
+在 server 的 src/controller/index.js 中创建新的 action
+
+const Base = require('./base.js');
+
+module.exports = class extends Base {
+  ...
+  abcAction() {
+    return this.display('abc.html');
+  }
+  _404Action() {
+    return this.display('404.html');
+  }
+};
+修改 router.js 添加新路由：
+
+module.exports = [
+  [/^\/api\/(.*)/i, '/:1'],
+  [/^\/$/i, '/'],
+  [/^\/admin\/?$/i, '/index/admin'],
+  [/^\/abc\/?$/i, '/index/abc'],
+  [/\//, 'index/_404', 'get']
+];
+分别重启sever、client即可。
+
+生产环境构建
+
+生产环境构建非常简单，直接在client下运行npm run build，将dist下生成的文件*.html拷贝到server的view目录下，将dist/static目录拷贝到server的www目录下，然后将server部署到生产环境运行即可。
+
+本公众号内回复 “资料”, 下载各种编程资料；
+本公众号内回复“面试题”“ajax”等词，可看对应资料；
+其它功能正在完善，不定期更新....
+觉得本文对你有帮助？请分享给更多人
+关注「前端大学」，提升前端技能
+
+阅读原文阅读 15357
+写留言
