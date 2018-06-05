@@ -1,0 +1,118 @@
+- 【效果演示地址】【github地址】
+javascript:
+ JavaScript中如何检测一个变量是一个String类型？请写出函数实现
+
+方法1、
+function isString(obj){
+    return typeof(obj) === "string"? true: false;
+    // returntypeof obj === "string"? true: false;
+}
+方法2、
+function isString(obj){
+    return obj.constructor === String? true: false;
+}
+方法3.
+function isString(obj){
+     return Object.prototype.toString.call(obj) === "[object String]"?true:false;
+}
+如：
+var isstring = isString('xiaoming');
+console.log(isstring);  // true
+请用js去除字符串空格？
+
+方法一：使用replace正则匹配的方法
+去除所有空格: str = str.replace(/\s*/g,"");      
+去除两头空格: str = str.replace(/^\s*|\s*$/g,"");
+去除左空格： str = str.replace( /^\s*/, “”);
+去除右空格： str = str.replace(/(\s*$)/g, "");
+str为要去除空格的字符串，实例如下：
+var str = " 23 23 ";
+var str2 = str.replace(/\s*/g,"");
+console.log(str2); // 2323
+方法二：使用str.trim()方法
+str.trim()局限性：无法去除中间的空格，实例如下：
+var str = "   xiao  ming   ";
+var str2 = str.trim();
+console.log(str2);   //xiao  ming 
+同理，str.trimLeft()，str.trimRight()分别用于去除字符串左右空格。
+方法三：使用jquery,$.trim(str)方法
+$.trim(str)局限性：无法去除中间的空格，实例如下：
+var str = "   xiao  ming   ";
+var str2 = $.trim(str)
+console.log(str2);   //  xiao  ming
+你如何获取浏览器URL中查询字符串中的参数？
+
+测试地址为：http://www.runoob.com/jquery/misc-trim.html?channelid=12333&name=xiaoming&age=23
+实例如下：
+function showWindowHref(){
+    var sHref = window.location.href;
+    var args = sHref.split('?');
+    if(args[0] == sHref){
+        return "";
+    }
+    var arr = args[1].split('&');
+    var obj = {};
+    for(var i = 0;i< arr.length;i++){
+        var arg = arr[i].split('=');
+        obj[arg[0]] = arg[1];
+    }
+    return obj;
+}
+var href = showWindowHref(); // obj
+console.log(href['name']); // xiaoming
+
+js 字符串操作函数
+
+　　我这里只是列举了常用的字符串函数，具体使用方法，请参考网址。
+concat() – 将两个或多个字符的文本组合起来，返回一个新的字符串。
+indexOf() – 返回字符串中一个子串第一处出现的索引。如果没有匹配项，返回 -1 。
+charAt() – 返回指定位置的字符。
+lastIndexOf() – 返回字符串中一个子串最后一处出现的索引，如果没有匹配项，返回 -1 。
+match() – 检查一个字符串是否匹配一个正则表达式。
+substr() 函数 -- 返回从string的startPos位置，长度为length的字符串
+substring() – 返回字符串的一个子串。传入参数是起始位置和结束位置。
+slice() – 提取字符串的一部分，并返回一个新字符串。
+replace() – 用来查找匹配一个正则表达式的字符串，然后使用新字符串代替匹配的字符串。
+search() – 执行一个正则表达式匹配查找。如果查找成功，返回字符串中匹配的索引值。否则返回 -1 。
+split() – 通过将字符串划分成子串，将一个字符串做成一个字符串数组。
+length – 返回字符串的长度，所谓字符串的长度是指其包含的字符的个数。
+toLowerCase() – 将整个字符串转成小写字母。
+toUpperCase() – 将整个字符串转成大写字母。
+怎样添加、移除、移动、复制、创建和查找节点？
+
+ 1）创建新节点
+　　createDocumentFragment() //创建一个DOM片段
+　　createElement() //创建一个具体的元素
+　　createTextNode() //创建一个文本节点
+2）添加、移除、替换、插入
+　　appendChild() //添加
+　　removeChild() //移除
+　　replaceChild() //替换
+　　insertBefore() //插入
+3）查找
+　　getElementsByTagName() //通过标签名称
+　　getElementsByName() //通过元素的Name属性的值
+　　getElementById() //通过元素Id，唯一性
+写出3个使用this的典型应用
+
+（1）、在html元素事件属性中使用，如：
+<input type=”button” onclick=”showInfo(this);” value=”点击一下”/>
+（2）、构造函数
+function Animal(name, color) {
+　　this.name = name;
+　　this.color = color;
+}
+（3）、input点击，获取值
+<input type="button" id="text" value="点击一下" />
+<script type="text/javascript">
+    var btn = document.getElementById("text");
+    btn.onclick = function() {
+        alert(this.value);    //此处的this是按钮元素
+    }
+</script>
+(4)、apply()/call()求数组最值
+var  numbers = [5, 458 , 120 , -215 ]; 
+var  maxInNumbers = Math.max.apply(this, numbers);  
+console.log(maxInNumbers);  // 458
+var maxInNumbers = Math.max.call(this,5, 458 , 120 , -215); 
+console.log(maxInNumbers);  // 458
