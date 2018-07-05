@@ -826,22 +826,31 @@ console.log(!!1 == true);
           var items = [];     //用来保存栈里的元素
           this.push = function (element) {
               items.push(element);
-          }
+          };
+          //移除栈顶的元素
           this.pop = function () {
               return items.pop();
-          }
+          };
+          //返回栈顶的元素
           this.peek = function () {
               return items[items.length-1];
-          }
+          };
+          this.shift = function () {
+              return items.shift();
+          };
+          this.unshift = function () {
+              return items.unshift();
+          };
           this.isEmpty = function () {
               return items.length == 0;
-          }
+          };
           this.size = function () {
               return items.length;
-          }
+          };
           this.clear = function () {
               items = [];
-          }
+          };
+          //一字符串的形式输出栈内的元素
           this.print = function () {
               console.log(items.toString());
           }
@@ -851,15 +860,42 @@ console.log(!!1 == true);
       console.log(stack.isEmpty());         //控制台输出true
       // 接下来，往栈里面添加一下元素：
 
-      stack.push(5);
+      stack.push(1);
       stack.push(8);
+      stack.push(5);
+      stack.push(3);
+      stack.push('sdd');
+      // // console.log(stack.peek());
+      // console.log(stack.pop());
+      stack.print();
+      // console.log(stack.shift());
+      //
       // 如果调用 peek 方法，很显然将会输出 8，因为它是栈顶的元素：
+      //
+      // // console.log(stack.peek());            //控制台输出8
+      // // // 再添加一个元素：
+      // //
+      // // stack.push(11);
+      // // console.log(stack.size());            //控制台输出3
+      // stack.print();
 
-      console.log(stack.peek());            //控制台输出8
-      // 再添加一个元素：
+       var testArr = [];
+       testArr.push(1);
+       testArr.push(2);
+       testArr.push(3);
 
-      stack.push(11);
-      console.log(stack.size());            //控制台输出3
+       testArr.shift();
+       testArr.unshift(1);
+       testArr.pop();
+
+       console.log(testArr)
+
+
+
+
+
+
+
 
 
 
