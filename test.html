@@ -860,11 +860,11 @@ console.log(!!1 == true);
       console.log(stack.isEmpty());         //控制台输出true
       // 接下来，往栈里面添加一下元素：
 
-      stack.push(1);
-      stack.push(8);
-      stack.push(5);
-      stack.push(3);
-      stack.push('sdd');
+      // stack.push(1);
+      // stack.push(8);
+      // stack.push(5);
+      // stack.push(3);
+      // stack.push('sdd');
       // // console.log(stack.peek());
       // console.log(stack.pop());
       stack.print();
@@ -878,24 +878,44 @@ console.log(!!1 == true);
       // // stack.push(11);
       // // console.log(stack.size());            //控制台输出3
       // stack.print();
-
+      //shift(去掉第一个） unshift(添加元素至最前面）
+      //pop(去掉最后一个元素）push(添加该元素到数组最后面）
        var testArr = [];
        testArr.push(1);
        testArr.push(2);
        testArr.push(3);
 
+       console.log("push->"+testArr)
+
        testArr.shift();
-       testArr.unshift(1);
+       console.log("shift->"+testArr)
+       testArr.unshift("first");
+       console.log("unshift->"+testArr)
        testArr.pop();
+       console.log("pop->"+testArr)
+       testArr.push(8);
 
-       console.log(testArr)
+       console.log("push->"+testArr)
 
+//this原理
+//       var obj = {
+//            fo:function (){ console.log(this)}
+//       };
+//
+//       var fo = obj.fo;
+//
+//       obj.fo();
+//
+//       fo();
 
-
-
-
-
-
+ var obj = {
+           fo1:function (){ console.log(this.bars)},
+           bars:2
+      };
+      var bars=4;
+      var fo1 = obj.fo1;
+      obj.fo1();
+      fo1();
 
 
 
