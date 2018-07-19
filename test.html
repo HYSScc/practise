@@ -23,31 +23,31 @@
   </form> -->
         <!--time类型-->
         <br>
-        <form>
-            <input name="time" type="time" value="00:00">
-        </form>
-        <br>
-        <form>
-            <input name="datetime" type="datetime" value="夏俊和马云" style="border:10px red solid;width:200px;height:50px;display:block;border-radius:20px;text-align:center;">
-        </form>
-        <br>
-        <form>
-            <input name="datetimelocal" type="datetime-local" value="">
-        </form>
-        <br>
-        <form>
-            <input name="search" type="search" value="请输入：">
-        </form>
-        <div id="vary">全剧变量</div>
-        <h2>文本渐变很流行</h2>
-        <div class="assd">移入移除</div>
-        <a class="asssd" href="www.baidu.com">请点击</a>
-        <table class="table">
-            <tr><td>第一行</td></tr>
-            <tr><td>第二行</td></tr>
-            <tr><td>第三行</td></tr>
-            <tr><td>第四行</td></tr>
-        </table>
+        <!--<form>-->
+            <!--<input name="time" type="time" value="00:00">-->
+        <!--</form>-->
+        <!--<br>-->
+        <!--<form>-->
+            <!--<input name="datetime" type="datetime" value="夏俊和马云" style="border:10px red solid;width:200px;height:50px;display:block;border-radius:20px;text-align:center;">-->
+        <!--</form>-->
+        <!--<br>-->
+        <!--<form>-->
+            <!--<input name="datetimelocal" type="datetime-local" value="">-->
+        <!--</form>-->
+        <!--<br>-->
+        <!--<form>-->
+            <!--<input name="search" type="search" value="请输入：">-->
+        <!--</form>-->
+        <!--<div id="vary">全剧变量</div>-->
+        <!--<h2>文本渐变很流行</h2>-->
+        <!--<div class="assd">移入移除</div>-->
+        <!--<a class="asssd" href="www.baidu.com">请点击</a>-->
+        <!--<table class="table">-->
+            <!--<tr><td>第一行</td></tr>-->
+            <!--<tr><td>第二行</td></tr>-->
+            <!--<tr><td>第三行</td></tr>-->
+            <!--<tr><td>第四行</td></tr>-->
+        <!--</table>-->
         <table>   
             <form name="Browser">   
             <tr>   
@@ -774,7 +774,7 @@ console.log(arrSorted);
 //     bubble_sort(number, SIZE);
 //     for (i = 0; i < SIZE; i++)
 //     {
-//         printf("%d", number[i]);
+//         printf("%oni]);
 //     }
 //     printf("\n");
 // }
@@ -916,6 +916,66 @@ console.log(!!1 == true);
       var fo1 = obj.fo1;
       obj.fo1();
       fo1();
+
+var hero = {
+    name:'jim',
+    get_id:function (){
+        return this.name;
+    }
+};
+
+var nowget_id = hero.get_id;
+console.log(nowget_id());
+console.log(hero.get_id());
+
+
+function trvel (p_element,p_callback){
+    p_callback(p_element);
+    var list = p_element.children;
+    for (var i=0;i<list.length;i++){
+        trvel(list[i],p_callback)
+
+    }
+
+}
+
+      
+(function (x) {
+    return (function(y){
+        console.log(x);
+        console.log(y)
+    })(2)
+    
+})(1)
+
+console.log((function f(n) {
+    return ((n>1?n*f(n-1):n))
+
+})(10))
+
+console.log(false == 0);//true
+console.log(false === 0);//false
+
+console.log("0||1=" +(0||1));
+console.log("1&&2=" +(1&&2))//2;
+console.log("2&&3="+(2&&3))//3
+
+// for(var i=0; i<5;i++){
+//     setTimeout(function(){console.log(i)},i*1000)
+// }
+
+for(let i=0; i<5;i++){
+    (function (g){
+        setTimeout(function () {
+            console.log(g)
+        },g*1000)
+    })(i)
+}
+
+
+
+
+
 
 
 
