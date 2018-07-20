@@ -946,12 +946,12 @@ function trvel (p_element,p_callback){
         console.log(y)
     })(2)
     
-})(1)
+})(1);
 
 console.log((function f(n) {
     return ((n>1?n*f(n-1):n))
 
-})(10))
+})(10));
 
 console.log(false == 0);//true
 console.log(false === 0);//false
@@ -964,24 +964,40 @@ console.log("2&&3="+(2&&3))//3
 //     setTimeout(function(){console.log(i)},i*1000)
 // }
 
-for(let i=0; i<5;i++){
-    (function (g){
-        setTimeout(function () {
-            console.log(g)
-        },g*1000)
-    })(i)
-}
+// for(let i=0; i<5;i++){
+//     (function (g){
+//         setTimeout(function () {
+//             console.log(g)
+//         },g*1000)
+//     })(i)
+// }
+
+
+
+
+      function isPalindrome(str) {
+          str2 = str.replace(/w/g,'');
+          str = str.replace(/W/g, '').toLowerCase();
+          str1=str.split('');
+          console.log(str,str1,  str2);
+          console.log(str1.reverse());
+          return (str == str.split('').reverse().join(''));
+      }
+      console.log(isPalindrome("angular"))
+
+
+      var arr1 = "john".split('');
+      var arr2 = arr1.reverse();
+      var arr3 = "jones".split('');
+      arr2.push(arr3);
+      console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+      console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
 
 
 
 
 
-
-
-
-
-
-})
+  })
 
     </script>
     <script language="JavaScript">
