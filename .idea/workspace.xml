@@ -88,7 +88,7 @@
       <path value="$PROJECT_DIR$/gulp/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1378" />
@@ -384,7 +384,7 @@
       <workItem from="1532053611216" duration="10836000" />
       <workItem from="1532138067705" duration="905000" />
       <workItem from="1532413657016" duration="1225000" />
-      <workItem from="1532485662010" duration="711000" />
+      <workItem from="1532485662010" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="ddd">
       <created>1532138342583</created>
@@ -397,10 +397,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101444000" />
+    <option name="totallyTimeSpent" value="101936000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14376321" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
