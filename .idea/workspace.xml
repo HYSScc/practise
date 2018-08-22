@@ -8,7 +8,6 @@
     <list id="a5fa80ba-3057-4e8a-92b7-9e9123db0414" name="New changelist" comment="" />
     <list default="true" id="67996808-4d7c-42e5-962a-e699fd348ee9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <list id="02d7ef7a-a74e-48e5-8ed8-30e15c900c2a" name="New changelist (3)" comment="let and const" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -378,7 +377,7 @@
       <workItem from="1532674752003" duration="599000" />
       <workItem from="1534384319434" duration="609000" />
       <workItem from="1534812595444" duration="1583000" />
-      <workItem from="1534906266286" duration="5606000" />
+      <workItem from="1534906266286" duration="5716000" />
     </task>
     <task id="LOCAL-00001" summary="ddd">
       <created>1532138342583</created>
@@ -387,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532138342583</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ddd">
+      <created>1534923902762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534923902762</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110333000" />
+    <option name="totallyTimeSpent" value="110443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
