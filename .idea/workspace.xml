@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list id="eb88dd8c-4d53-424e-9788-3c859e84c191" name="New changelist (2)" comment="" />
+    <list id="02d7ef7a-a74e-48e5-8ed8-30e15c900c2a" name="New changelist (3)" comment="let and const" />
     <list id="a5fa80ba-3057-4e8a-92b7-9e9123db0414" name="New changelist" comment="" />
     <list default="true" id="67996808-4d7c-42e5-962a-e699fd348ee9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="02d7ef7a-a74e-48e5-8ed8-30e15c900c2a" name="New changelist (3)" comment="let and const" />
+    <list id="3f9eed17-3ba3-47dc-8411-4d2ac8b39f60" name="New changelist (4)" comment="let" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,12 +23,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="1029" column="8" lean-forward="false" selection-start-line="1029" selection-start-column="8" selection-end-line="1029" selection-end-column="8" />
+            <state relative-caret-position="79">
+              <caret line="1022" column="46" lean-forward="true" selection-start-line="1022" selection-start-column="46" selection-end-line="1022" selection-end-column="46" />
               <folding>
                 <element signature="e#9064#9596#0" expanded="false" />
                 <element signature="e#11737#11739#0" expanded="false" />
@@ -124,8 +125,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -330,6 +331,7 @@
       <changelist id="a5fa80ba-3057-4e8a-92b7-9e9123db0414" name="New changelist" comment="" />
       <changelist id="eb88dd8c-4d53-424e-9788-3c859e84c191" name="New changelist (2)" comment="" />
       <changelist id="02d7ef7a-a74e-48e5-8ed8-30e15c900c2a" name="New changelist (3)" comment="let and const" />
+      <changelist id="3f9eed17-3ba3-47dc-8411-4d2ac8b39f60" name="New changelist (4)" comment="let" />
       <created>1511781531816</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -377,7 +379,8 @@
       <workItem from="1532674752003" duration="599000" />
       <workItem from="1534384319434" duration="609000" />
       <workItem from="1534812595444" duration="1583000" />
-      <workItem from="1534906266286" duration="5716000" />
+      <workItem from="1534906266286" duration="8219000" />
+      <workItem from="1534992427761" duration="661000" />
     </task>
     <task id="LOCAL-00001" summary="ddd">
       <created>1532138342583</created>
@@ -393,23 +396,30 @@
       <option name="project" value="LOCAL" />
       <updated>1534923902762</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ddd">
+      <created>1534923938718</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534923938718</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110443000" />
+    <option name="totallyTimeSpent" value="113607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14349777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14275037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5021142" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.49788582" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.49788582" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -995,8 +1005,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="1029" column="8" lean-forward="false" selection-start-line="1029" selection-start-column="8" selection-end-line="1029" selection-end-column="8" />
+        <state relative-caret-position="79">
+          <caret line="1022" column="46" lean-forward="true" selection-start-line="1022" selection-start-column="46" selection-end-line="1022" selection-end-column="46" />
           <folding>
             <element signature="e#9064#9596#0" expanded="false" />
             <element signature="e#11737#11739#0" expanded="false" />
