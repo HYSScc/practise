@@ -10,7 +10,6 @@
     <list id="a5fa80ba-3057-4e8a-92b7-9e9123db0414" name="New changelist" comment="" />
     <list default="true" id="67996808-4d7c-42e5-962a-e699fd348ee9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
     </list>
     <list id="8cb534ec-a743-4287-8bdc-6d871f1e937d" name="New changelist (5)" comment="class and string" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -385,7 +384,7 @@
       <workItem from="1534906266286" duration="8219000" />
       <workItem from="1534992427761" duration="765000" />
       <workItem from="1535068482272" duration="607000" />
-      <workItem from="1535076613710" duration="4427000" />
+      <workItem from="1535076613710" duration="4476000" />
     </task>
     <task id="LOCAL-00001" summary="ddd">
       <created>1532138342583</created>
@@ -415,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535029144559</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="class and string">
+      <created>1535106251538</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535106251538</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118745000" />
+    <option name="totallyTimeSpent" value="118794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -497,7 +503,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ddd" />
     <MESSAGE value="let" />
-    <option name="LAST_COMMIT_MESSAGE" value="let" />
+    <MESSAGE value="class and string" />
+    <option name="LAST_COMMIT_MESSAGE" value="class and string" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
