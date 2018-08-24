@@ -1048,7 +1048,47 @@ console.log("2&&3="+(2&&3))//3
 
             const a=3;
 
-        })
+        });
+
+        // function user (name,old){
+        //      this.name = name;
+        //      this.old = old;
+        // }
+        // user.prototype.showName = function (){
+        //     alert(this.name);
+        // };
+        // var ul = new user(23,'adfsd');
+        // ul.showName();
+        class User{
+            constructor (name,pass){
+                this.name = name;
+                this.pass = pass;
+            }
+
+            showName(){
+                alert(this.name);
+            }
+            showPass(){
+                alert(this.pass)
+            }
+        }
+        var ul = new User(34,'dfsd');
+        ul.showName();
+        ul.showPass();
+        class VipUser extends User{
+            constructor (name,pass,color){
+                super(name,pass);
+                this.color = color;
+            }
+            showColor(){
+                alert(this.color)
+            }
+        }
+        var vipUl = new VipUser(54,'sdf','blue');
+        vipUl.showColor();
+        vipUl.showName();
+        vipUl.showPass();
+
     </script>
 
 </html>
